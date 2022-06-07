@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" style="height: 500px">
 
-    <h1>User Registration</h1>
+    <h1 style="text-align:center">User Registration</h1>
 
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
 
@@ -8,7 +8,7 @@
 
             <label for="firstname">FirstName</label><br>
 
-            <input type="text" formControlName="name" name="firstname" placeholder="Your name" class="form-control"
+            <input type="text" formControlName="name" name="firstname" placeholder="Your name" class="form-control input"
                 [ngClass]="{'error': submitted && myForm.controls.name.errors}">
 
             <div class="invalid-feedback" class="error" *ngIf="submitted && myForm.controls.name.errors?.required">
@@ -23,7 +23,7 @@
 
             <label for="email">EmailID</label><br>
 
-            <input type="text" formControlName="email" name="email" placeholder="Your email" class="form-control">
+            <input type="text" formControlName="email" name="email" placeholder="Your email" class="form-control input">
 
             <div class="invalid-feedback" class="error" *ngIf="submitted && myForm.controls.email.errors?.required">
                 <sup>*</sup>Enter your Email
@@ -39,7 +39,7 @@
         <div class="form-group">
             <label for="password">Password</label><br>
             <input type="password" name="password" formControlName="password" placeholder="Your password"
-                class="form-control">
+                class="form-control input">
             <div class="invalid-feedback" class="error" *ngIf="submitted && myForm.controls.password.errors?.required">
                 <sup>*</sup>Enter a Password
             </div>
@@ -52,3 +52,5 @@
     </form>
 
 </div>
+
+

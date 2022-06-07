@@ -1,6 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-.error{
-    color: red
+.box-body{
+    padding:1rem;
+  }
+  
+  .error{
+    color:red;
+    margin: 5px 0 0 10px;
+  }
+
+
+  .box-body{
+    padding : 1rem
+}
+
+input{
+    height: 30px;
+    width: 94%;
+    margin-left: 10px;
+}
+
+label{
+    margin-left:10px
+}
+
+form{
+    width: 50%;
+    background-color: lightgray;
+    margin-left: 25%;
+    border-radius: 5px;
+    height: 75%;
+}
+
+button{
+    margin-left: 25%;
+    height: 15%;
+    width: 50%;
+    margin-top: 20px
+
 }
