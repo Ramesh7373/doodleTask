@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormBuilder, FormGroup ,Validators} from '@angular/forms';
+import { TaskServiceService } from 'src/app/task-component/task-service.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-task-component',
@@ -8,10 +10,15 @@ import { FormControl,FormBuilder, FormGroup ,Validators} from '@angular/forms';
 })
 export class TaskComponentComponent implements OnInit {
 
+  heading = 'Task';
+  showCompleted = false
+  selectedTask = false
+  selectedTaskList = []
   myForm: FormGroup;
   emailPattern = "[A-Za-z0-9._%+-]{1,}@[a-zA-Z-_.]{1,}[.]{1}[a-zA-Z]{2,}";
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, 
+    private taskServiceService : TaskServiceService,private router: Router) { }
 
   ngOnInit(): void {
     this.createForm()
@@ -30,6 +37,22 @@ export class TaskComponentComponent implements OnInit {
     console.log('Name ==', form.value.taskname);
     console.log('Email == ', form.value.date);
     }
+  }
+
+  newEmittedData(e){
+    this.selectedTaskList = []
+    console.log(e);
+    if(e){
+      this.selectedTaskList.push(e)
+      this.showCompleted = false
+      this.selectedTask = true
+    }
+    
+  }
+
+  openCompleted(){
+    this.showCompleted = true
+    
   }
 
 }

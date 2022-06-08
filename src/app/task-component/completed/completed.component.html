@@ -1,0 +1,9 @@
+<!-- <div class="page-header-image" style="background-image:url(assets/img/login.jpg)"></div>
+
+<app-header  [heading]="heading"></app-header> -->
+
+
+<div (click)="close(data)" class="div1" *ngFor="let data of tasks">
+        <p>{{data.task}}</p>
+        <p>{{data.date}}</p>
+</div>

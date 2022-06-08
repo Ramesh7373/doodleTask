@@ -1,9 +1,289 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$sans-serif-family:          'Montserrat', 'Helvetica Neue',  Arial, sans-serif !default;
+
+$none:                       0   !default;
+$border-thin:                1px !default;
+$border-thick:               2px !default;
+
+$white-color:                #FFFFFF !default;
+$white-bg:                   #FFFFFF !default;
+$orange-bg:                  #e95e38 !default;
+
+$smoke-bg:                   #F5F5F5 !default;
+$light-black:                #444    !default;
+
+$black-bg:                   rgba(30,30,30,.97) !default;
+
+$black-color:                #2c2c2c !default;
+$black-hr:                   #444444 !default;
+
+$light-gray:                 #E3E3E3 !default;
+$medium-gray:                #DDDDDD !default;
+$dark-gray:                  #9A9A9A !default;
+
+$opacity-gray-3:             rgba(222,222,222, .3) !default;
+$opacity-gray-5:             rgba(222,222,222, .5) !default;
+$opacity-gray-8:             rgba(222,222,222, .8) !default;
 
 
-.box-body{
-    padding:1rem;
-  }
+$opacity-5:                  rgba(255,255,255, .5) !default;
+$opacity-8:                  rgba(255,255,255, .8) !default;
+
+$datepicker-color-days:             rgba(255,255,255, .8)  !default;
+$datepicker-color-old-new-days:     rgba(255,255,255, .4)  !default;
+
+
+$opacity-1:                  rgba(255,255,255, .1) !default;
+$opacity-2:                  rgba(255,255,255, .2) !default;
+
+$transparent-bg:             transparent !default;
+$dark-background:            #555555 !default;
+
+$default-color:              #888888 !default;
+$default-states-color:       lighten($default-color, 6%) !default;
+$default-color-opacity:      rgba(182, 182, 182, .6) !default;
+
+$primary-color:              #f96332 !default;
+$primary-states-color:       lighten($primary-color, 6%) !default;
+$primary-color-opacity:      rgba(249, 99, 50, .3) !default;
+$primary-color-alert:        rgba(249, 99, 50, .8) !default;
+
+$success-color:              #18ce0f !default;
+$success-states-color:       lighten($success-color, 6%) !default;
+$success-color-opacity:      rgba(24, 206, 15, .3) !default;
+$success-color-alert:        rgba(24, 206, 15, .8) !default;
+
+$info-color:                 #2CA8FF !default;
+$info-states-color:          lighten($info-color, 6%) !default;
+$info-color-opacity:         rgba(44, 168, 255, .3) !default;
+$info-color-alert:           rgba(44, 168, 255, .8) !default;
+
+$warning-color:              #FFB236 !default;
+$warning-states-color:       lighten($warning-color, 6%) !default;
+$warning-color-opacity:      rgba(255, 178, 54, .3) !default;
+$warning-color-alert:        rgba(255, 178, 54, .8) !default;
+
+$danger-color:               #FF3636 !default;
+$danger-states-color:        lighten($danger-color, 6%) !default;
+$danger-color-opacity:       rgba(255, 54, 54, .3) !default;
+$danger-color-alert:         rgba(255, 54, 54, .8) !default;
+
+/*     brand Colors              */
+$brand-primary:              $primary-color !default;
+$brand-info:                 $info-color !default;
+$brand-success:              $success-color !default;
+$brand-warning:              $warning-color !default;
+$brand-danger:               $danger-color !default;
+$brand-inverse:              $black-color !default;
+
+$link-disabled-color:        #666666 !default;
+
+/*      light colors         */
+$light-blue:                 rgba($primary-color, .2);
+$light-azure:                rgba($info-color, .2);
+$light-green:                rgba($success-color, .2);
+$light-orange:               rgba($warning-color, .2);
+$light-red:                  rgba($danger-color, .2);
+
+//== Components
+//
+
+$padding-input-vertical:        11px !default;
+$padding-input-horizontal:      19px !default;
+
+$padding-btn-vertical:         11px !default;
+$padding-btn-horizontal:       22px !default;
+
+$padding-base-vertical:        .5rem !default;
+$padding-base-horizontal:      .7rem !default;
+
+$padding-round-horizontal:     23px !default;
+
+$padding-simple-vertical:      10px !default;
+$padding-simple-horizontal:    17px !default;
+
+$padding-large-vertical:       15px !default;
+$padding-large-horizontal:     48px !default;
+
+$padding-small-vertical:        5px !default;
+$padding-small-horizontal:     15px !default;
+
+// $padding-xs-vertical:           1px !default;
+// $padding-xs-horizontal:         5px !default;
+
+$padding-label-vertical:        2px !default;
+$padding-label-horizontal:     12px !default;
+
+$margin-large-vertical:        30px !default;
+$margin-base-vertical:         15px !default;
+
+$margin-base-horizontal:       15px !default;
+
+$margin-bottom:                 10px        !default;
+$border:                        1px solid   !default;
+$border-radius-extra-small:     0.125rem    !default;
+$border-radius-small:           0.1875rem   !default;
+$border-radius-large:           0.25rem     !default;
+$border-radius-extreme:         0.875rem    !default;
+
+$border-radius-large-top:      $border-radius-large $border-radius-large 0 0 !default;
+$border-radius-large-bottom:   0 0 $border-radius-large $border-radius-large !default;
+
+$btn-round-radius:             30px         !default;
+
+$height-base:                  55px         !default;
+
+$btn-icon-size:                 3.5rem       !default;
+$btn-icon-size-regular:         2.375rem      !default;
+$btn-icon-font-size-regular:    0.9375rem     !default;
+$btn-icon-font-size-small:      0.6875rem      !default;
+$btn-icon-size-small:           1.875rem     !default;
+$btn-icon-font-size-lg:         1.325rem     !default;
+$btn-icon-size-lg:              3.6rem         !default;
+
+$font-size-h1:                 3.5em        !default; // ~ 49px
+$font-size-h2:                 2.5em        !default; // ~ 35px
+$font-size-h3:                 1.825em      !default; // ~ 28px
+$font-size-h4:                 1.5em        !default; // ~ 24px
+$font-size-h5:                 1.3em        !default; // ~ 22px
+$font-size-h6:                 .9em         !default; // ~ 12px
+
+$font-paragraph:               1.2em          !default;
+$font-size-navbar:             1em          !default;
+$font-size-mini:               0.7142em     !default;
+$font-size-small:              0.8571em     !default;
+$font-size-base:               14px         !default;
+$font-size-large:              1em          !default;
+$font-size-large-navbar:       20px         !default;
+$font-size-blockquote:         1.1em        !default; // ~ 15px
+
+$font-weight-light:             300         !default;
+$font-weight-normal:            400         !default;
+$font-weight-semi:              600         !default;
+$font-weight-bold:              700         !default;
+
+$line-height-general:        1.5            !default;
+$line-height-nav-link:       1.625rem       !default;
+$btn-icon-line-height:       2.4em          !default;
+$line-height:                1.35em         !default;
+$line-height-lg:             54px           !default;
+
+
+$border-radius-top:        10px 10px 0 0     !default;
+$border-radius-bottom:     0 0 10px 10px     !default;
+
+$dropdown-shadow:          1px 2px 3px rgba(0, 0, 0, 0.125);
+$box-shadow-raised:        0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+
+$general-transition-time:  300ms             !default;
+
+$slow-transition-time:           370ms       !default;
+$dropdown-coordinates:      29px -50px       !default;
+
+$fast-transition-time:           150ms       !default;
+$select-coordinates:         50% -40px       !default;
+
+$transition-linear:         linear           !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease:           ease 0s;
+
+
+//$navbar-padding-a:               9px 13px;
+$navbar-margin-a:                15px 0px;
+
+$padding-social-a:               10px 5px;
+
+$navbar-margin-a-btn:            15px 0px;
+$navbar-margin-a-btn-round:      16px 0px;
+
+$navbar-padding-a-icons:         6px 15px;
+$navbar-margin-a-icons:          6px  3px;
+
+$navbar-padding-base:            0.625rem;
+//$navbar-margin-brand:             5px  0px;
+
+$navbar-margin-brand-icons:      12px auto;
+$navbar-margin-btn:              15px  3px;
+
+$height-icon-sm:				 32px;
+$width-icon-sm:					 32px;
+$padding-icon-sm:			     4px;
+$border-radius-icon-sm:			 7px;
+
+$height-icon-message:			 40px;
+$width-icon-message:			 40px;
+
+$height-icon-message-sm: 		 20px;
+$width-icon-message-sm:			 20px;
+
+$white-navbar:                  rgba(#FFFFFF, .96);
+$primary-navbar:                rgba(#34ACDC, .98);
+$info-navbar:                   rgba(#5BCAFF, .98);
+$success-navbar:                rgba(#4CD964, .98);
+$warning-navbar:                rgba(#FF9500, .98);
+$danger-navbar:                 rgba(#FF4C40, .98);
+
+$topbar-x:             topbar-x !default;
+$topbar-back:          topbar-back !default;
+$bottombar-x:          bottombar-x !default;
+$bottombar-back:       bottombar-back !default;
+
+//Nucleo Icons
+
+$nc-font-path:        '../fonts' !default;
+$nc-font-size-base:   14px !default;
+$nc-css-prefix:       now-ui !default;
+$nc-background-color:     #eee !default;
+$nc-li-width:         (30em / 14) !default;
+$nc-padding-width:    (1em/3) !default;
+
+// Social icons color
+$social-twitter:                   #55acee !default;
+$social-twitter-state-color:       lighten(#55acee, 6%) !default;
+
+$social-facebook: 			       #3b5998 !default;
+$social-facebook-state-color:      lighten(#3b5998, 6%) !default;
+
+$social-google: 			       #dd4b39 !default;
+$social-google-state-color:        lighten(#dd4b39, 6%) !default;
+
+$social-linkedin: 			       #0077B5 !default;
+$social-linkedin-state-color:      lighten(#0077B5, 6%) !default;
+
+$social-pinterest: 			       #cc2127 !default;
+$social-pinterest-state-color:     lighten(#cc2127, 6%) !default;
+
+$social-dribbble: 		           #ea4c89 !default;
+$social-dribbble-state-color:      lighten(#ea4c89, 6%) !default;
+
+$social-github: 		      	   #333333 !default;
+$social-github-state-color:        lighten(#333333, 6%) !default;
+
+$social-youtube: 		    	   #e52d27 !default;
+$social-youtube-state-color:       lighten(#e52d27, 6%) !default;
+
+$social-instagram: 		           #125688 !default;
+$social-instagram-state-color:     lighten(#125688, 6%) !default;
+
+$social-reddit: 		  	       #ff4500 !default;
+$social-reddit-state-color:        lighten(#ff4500, 6%) !default;
+
+$social-tumblr: 			       #35465c !default;
+$social-tumblr-state-color:        lighten(#35465c, 6%) !default;
+
+$social-behance: 			       #1769ff !default;
+$social-behance-state-color:       lighten(#1769ff, 6%) !default;
+
+
+// .box-body{
+//     padding:1rem;
+//   }
   
   .error{
     color:red;
@@ -11,32 +291,1085 @@
   }
 
 
-  .box-body{
-    padding : 1rem
+//   .box-body{
+//     padding : 1rem
+// }
+
+// input{
+//     height: 30px;
+//     width: 94%;
+//     margin-left: 10px;
+// }
+
+// label{
+//     margin-left:10px
+// }
+
+// form{
+//     width: 50%;
+//     background-color: lightgray;
+//     margin-left: 25%;
+//     border-radius: 5px;
+//     height: 75%;
+// }
+
+// button{
+//     margin-left: 25%;
+//     height: 15%;
+//     width: 50%;
+//     margin-top: 20px
+
+// }
+
+.page-header-image{
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-input{
-    height: 30px;
-    width: 94%;
-    margin-left: 10px;
+.card{
+    border: 0;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .card-body{
+        min-height: 190px;
+    }
+
+    &[data-background-color="orange"]{
+        background-color: $primary-color;
+    }
+
+    &[data-background-color="red"]{
+        background-color: $danger-color;
+    }
+
+    &[data-background-color="yellow"]{
+        background-color: $warning-color;
+    }
+
+    &[data-background-color="blue"]{
+        background-color: $info-color;
+    }
+
+    &[data-background-color="green"]{
+        background-color: $success-color;
+    }
 }
 
-label{
-    margin-left:10px
+.card-signup{
+    max-width: 350px;
+    margin: 0 auto;
+
+    .header{
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px 0;
+    }
+    .text-divider{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .card-body{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-height: auto;
+    }
+
+    .checkbox{
+        margin-top: 20px;
+
+        label{
+            margin-left: 17px;
+        }
+        .checkbox-material{
+            padding-right: 12px;
+        }
+    }
+
+    .social-line{
+        margin-top: 20px;
+        text-align: center;
+
+        .btn.btn-icon ,
+        .btn.btn-icon .btn-icon -mini{
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .footer{
+        margin-bottom: 10px;
+        margin-top: 24px;
+    }
 }
 
-form{
-    width: 50%;
-    background-color: lightgray;
-    margin-left: 25%;
-    border-radius: 5px;
-    height: 75%;
+.card-plain{
+    background: transparent;
+    box-shadow: none;
+
+    .header{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-button{
-    margin-left: 25%;
-    height: 15%;
-    width: 50%;
-    margin-top: 20px
+// style for the landing page
+.index-page{
+    .page-header{
+        height: 125vh;
+
+        .container{
+            > .content-center{
+                top: 37%;
+            }
+        }
+
+        .category-absolute{
+            position: absolute;
+            top: 100vh;
+            margin-top: -60px;
+            padding: 0 15px;
+            width: 100%;
+            color: rgba(255,255,255,.5);
+        }
+    }
+}
+.landing-page{
+
+    .header{
+        height: 100vh;
+        position: relative;
+
+        .container{
+            padding-top: 26vh;
+            color: #FFFFFF;
+            z-index: 2;
+            position: relative;
+        }
+
+        .share{
+            margin-top: 150px;
+        }
+        h1{
+            font-weight: 600;
+        }
+        .title{
+            color: $white-color;
+        }
+    }
+
+    .section-team{
+        .team .team-player img{
+            max-width: 100px;
+        }
+
+        .team-player{
+            margin-bottom: 15px;
+        }
+    }
+
+    .section-contact-us{
+        .title{
+            margin-bottom: 15px;
+        }
+
+        .description{
+            margin-bottom: 30px;
+        }
+
+        .input-group,
+        .send-button,
+        .textarea-container{
+            padding: 0 40px;
+        }
+
+        .textarea-container{
+            margin: 40px 0;
+        }
+
+        a.btn{
+            margin-top: 35px;
+        }
+    }
+}
+
+// style for the profile page
+.profile-page{
+
+    .page-header{
+        min-height: 550px;
+    }
+
+    .profile-container{
+        color: #FFFFFF;
+    }
+    .photo-container{
+        width: 123px;
+        height: 123px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .title{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .description,
+    .category{
+        text-align: center;
+    }
+
+    h5.description{
+        max-width: 700px;
+        margin: 20px auto 75px;
+    }
+
+    .nav-align-center{
+        margin-top: 30px;
+    }
+
+    .content{
+        max-width: 450px;
+        margin: 0 auto;
+
+        .social-description{
+            display: inline-block;
+            max-width: 150px;
+            width: 145px;
+            text-align: center;
+            margin: 15px 0 0px;
+
+            h2{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .button-container{
+        text-align: center;
+        margin-top: -106px;
+    }
+
+    .collections{
+        img{
+            margin-bottom: 30px;
+        }
+    }
+
+    .tab-content{
+        margin-top: 45px;
+        padding-bottom: 50px;
+    }
+}
+
+.section-full-page{
+
+    &:after,
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &:before{
+        background-color: rgba(0,0,0,.5);
+    }
+
+    &[filter-color="purple"],
+    &[filter-color="primary"]{
+        &:after{
+            // @include linear-gradient(rgba($light-gray,.26), rgba($primary-color,.95));
+
+        }
+
+    }
+
+    &[data-image]:after{
+        opacity: .5;
+    }
+
+    > .content,
+    > .footer{
+        position: relative;
+        z-index: 4;
+    }
+
+    > .content{
+        min-height: calc(100vh - 80px);
+    }
+
+    .full-page-background{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    .footer nav > ul a:not(.btn),
+    .footer,
+    .footer .copyright a{
+        color: $white-color;
+    }
 
 }
+
+.login-page{
+
+    .card-login{
+        border-radius: $border-radius-large;
+        padding-bottom: $padding-base-horizontal;
+        max-width: 320px;
+
+        .btn-wd{
+            min-width: 180px;
+        }
+
+        .logo-container{
+            width: 65px;
+            margin: 0 auto;
+            margin-bottom: 55px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .input-group:last-child{
+            margin-bottom: 40px;
+        }
+
+        &.card-plain{
+            // @include input-coloured-bg($opacity-5, $white-color, $white-color, $transparent-bg, $opacity-1, $opacity-2);
+
+            .input-group-text,
+            .form-group.form-group-no-border .input-group-text,
+            .input-group.form-group-no-border .input-group-text{
+                color: $opacity-8;
+            }
+        }
+    }
+
+    .link{
+        font-size: 10px;
+        color: $white-color;
+        text-decoration: none;
+    }
+}
+
+.section{
+    padding: 70px 0;
+    position: relative;
+    background: $white-color;
+
+    .row + .category{
+        margin-top: $margin-base-vertical;
+    }
+}
+.section-navbars{
+    padding-bottom: 0;
+}
+
+.section-full-screen{
+    height: 100vh;
+}
+.section-signup{
+    padding-top: 20vh;
+}
+
+.page-header{
+    height: 100vh;
+    max-height: 1050px;
+    padding: 0;
+    color: $white-color;
+    position: relative;
+
+    background-position: center center;
+    background-size: cover;
+
+    .page-header-image{
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .container{
+        height: 100%;
+        z-index: 1;
+        text-align: center;
+        position: relative;
+
+        > .content-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            -ms-transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+
+            text-align: center;
+            padding: 0 15px;
+            color: #FFFFFF;
+            width: 100%;
+            max-width: 880px;
+        }
+    }
+    .category,
+    .description{
+        color: $opacity-5;
+    }
+
+    &.page-header-small{
+        min-height: 60vh;
+        max-height: 440px;
+    }
+
+    &:after,
+    &:before{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
+    }
+
+    &:before{
+        background-color: rgba(0,0,0,.5);
+    }
+
+    &[filter-color="orange"]{
+        // @include linear-gradient(rgba($black-color,.20), rgba(224, 23, 3, 0.6));
+    }
+
+    .container{
+        z-index: 2;
+    }
+
+}
+
+.clear-filter{
+    &:after,
+    &:before{
+        display: none;
+    }
+}
+
+.section-story-overview{
+    padding: 50px 0;
+
+    .image-container{
+        height: 335px;
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+        box-shadow: $box-shadow-raised;
+        border-radius: .25rem;
+
+        & + .category{
+            padding-top: 15px;
+        }
+
+        &.image-right{
+            z-index: 2;
+
+            + h3.title{
+                margin-top: 120px;
+            }
+        }
+
+        &.image-left{
+            z-index: 1;
+        }
+
+        &:nth-child(2){
+            margin-top: 420px;
+            margin-left: -105px;
+        }
+    }
+
+    p.blockquote{
+        width: 220px;
+        min-height: 180px;
+        text-align: left;
+        position: absolute;
+        top: 376px;
+        right: 155px;
+        z-index: 0;
+    }
+}
+
+.section-nucleo-icons{
+     .nucleo-container img{
+        width: auto;
+        left: 0;
+        top: 0;
+        height: 100%;
+        position: absolute;
+    }
+
+     .nucleo-container{
+        height: 335px;
+        position: relative;
+    }
+
+     h5{
+        margin-bottom: 35px;
+    }
+
+     .icons-container{
+        position: relative;
+        max-width: 450px;
+        height: 300px;
+        max-height: 300px;
+        margin: 0 auto;
+
+    }
+     .icons-container i{
+        font-size: 34px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+     .icons-container i:nth-child(1){
+        top: 5%;
+        left: 7%;
+    }
+
+     .icons-container i:nth-child(2){
+         top: 28%;
+         left: 24%;
+    }
+
+     .icons-container i:nth-child(3){
+         top: 40%;
+    }
+
+     .icons-container i:nth-child(4){
+         top: 18%;
+         left: 62%;
+    }
+
+     .icons-container i:nth-child(5){
+         top: 74%;
+         left: 3%;
+    }
+
+     .icons-container i:nth-child(6){
+         top: 36%;
+         left: 44%;
+        font-size: 65px;
+        color: #f96332;
+        padding: 1px;
+    }
+
+     .icons-container i:nth-child(7){
+         top: 59%;
+         left: 26%;
+    }
+
+     .icons-container i:nth-child(8){
+         top: 60%;
+         left: 69%;
+    }
+
+     .icons-container i:nth-child(9){
+        top: 72%;
+        left: 47%;
+    }
+
+     .icons-container i:nth-child(10){
+         top: 88%;
+         left: 27%;
+    }
+
+     .icons-container i:nth-child(11){
+         top: 31%;
+         left: 80%;
+    }
+
+     .icons-container i:nth-child(12){
+         top: 88%;
+         left: 68%;
+    }
+
+     .icons-container i:nth-child(13){
+         top: 5%;
+         left: 81%;
+    }
+
+     .icons-container i:nth-child(14){
+         top: 58%;
+         left: 90%;
+    }
+
+     .icons-container i:nth-child(15){
+        top: 6%;
+        left: 40%;
+    }
+}
+
+.section-images{
+    max-height: 670px;
+    height: 670px;
+
+    .hero-images-container,
+    .hero-images-container-1,
+    .hero-images-container-2{
+        margin-top: -38vh;
+    }
+
+    .hero-images-container{
+        max-width: 670px;
+    }
+
+    .hero-images-container-1{
+        max-width: 390px;
+        position: absolute;
+        top: 55%;
+        right: 18%;
+
+    }
+
+    .hero-images-container-2{
+        max-width: 225px;
+        position: absolute;
+        top: 68%;
+        right: 12%;
+    }
+}
+
+
+[data-background-color="orange"]{
+    background-color: $orange-bg;
+}
+[data-background-color="black"]{
+    background-color: $black-color;
+}
+
+[data-background-color]{
+    color: $white-color;
+
+    .title,
+    .social-description h2,
+    p,
+    p.blockquote,
+    p.blockquote small,
+    h1,h2,h3,h4,h5,h6,a:not(.btn):not(.dropdown-item),
+    .icons-container i{
+        color: $white-color;
+    }
+
+    .separator{
+        background-color: $white-color;
+    }
+
+    .navbar.bg-white p{
+        color: $default-color;
+    }
+
+    .description,
+    .social-description p{
+        color: $opacity-8;
+    }
+
+    p.blockquote{
+        border-color: $opacity-2;
+    }
+
+    //radio and checkboxes
+    .checkbox label::before,
+    .checkbox label::after,
+    .radio label::before,
+    .radio label::after{
+        border-color: $opacity-2;
+    }
+
+    .checkbox label::after,
+    .checkbox label,
+    .radio label{
+        color: $white-color;
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label,
+    .radio input[type="radio"]:disabled + label  {
+        color: $white-color;
+    }
+
+    .radio input[type="radio"]:not(:disabled):hover + label::after,
+    .radio input[type="radio"]:checked + label::after {
+        background-color: $white-color;
+        border-color: $white-color;
+    }
+
+    //inputs
+    // @include input-coloured-bg($opacity-5, $white-color, $white-color, $transparent-bg, $opacity-1, $opacity-2);
+
+    .input-group-text,
+    .form-group.form-group-no-border .input-group-text,
+    .input-group.form-group-no-border .input-group-text{
+        color: $opacity-8;
+    }
+
+    //buttons
+    .btn.btn-simple{
+        background-color: $transparent-bg;
+        border-color: $opacity-5;
+        color: $white-color;
+
+        &:hover,
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: $transparent-bg;
+            border-color: $white-color;
+        }
+    }
+
+    //tabs
+    .nav-tabs{
+        > .nav-item{
+            >.nav-link{
+                i.now-ui-icons{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    &.section-nucleo-icons .icons-container i:nth-child(6){
+        color: $white-color;
+    }
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea{
+    font-family: $sans-serif-family;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: $font-weight-normal;
+}
+
+small{
+    font-size: 60%;
+}
+
+a{
+    color: $primary-color;
+    &:hover,
+    &:focus{
+        color: $primary-color;
+    }
+}
+h1, .h1 {
+    font-size: $font-size-h1;
+    line-height: 1.15;
+    margin-bottom: $margin-base-vertical * 2;
+
+    small{
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        opacity: .8;
+    }
+}
+h2, .h2{
+    font-size: $font-size-h2;
+    margin-bottom: $margin-base-vertical * 2;
+}
+h3, .h3{
+    font-size: $font-size-h3;
+    margin-bottom: $margin-base-vertical * 2;
+    line-height: 1.4em;
+}
+h4, .h4{
+    font-size: $font-size-h4;
+    line-height: 1.45em;
+    margin-top: $margin-base-vertical * 2;
+    margin-bottom: $margin-base-vertical;
+
+    & + .category,
+    &.title + .category{
+        margin-top: -10px;
+    }
+}
+h5, .h5 {
+    font-size: $font-size-h5;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+h6, .h6{
+    font-size: $font-size-h6;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+p{
+    line-height: 1.61em;
+
+    .description &,
+    &.description{
+        font-size: 1.14em;
+    }
+}
+
+.title{
+    font-weight: $font-weight-bold;
+
+    &.title-up{
+        text-transform: uppercase;
+
+        a{
+            color: $black-color;
+            text-decoration: none;
+        }
+    }
+    & + .category{
+        margin-top: -25px;
+    }
+}
+
+.description,
+.card-description,
+.footer-big p{
+    color: $dark-gray;
+    font-weight: $font-weight-light;
+}
+.category{
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    color: $dark-gray;
+}
+.text-primary {
+  color: $brand-primary !important;
+}
+.text-info {
+  color: $brand-info !important;
+}
+.text-success {
+  color: $brand-success !important;
+}
+.text-warning {
+  color: $brand-warning !important;
+}
+.text-danger {
+  color: $brand-danger !important;
+}
+.text-black{
+  color: $light-black;
+}
+
+.blockquote{
+    border-left: none;
+    border: 1px solid $default-color;
+    padding: 20px;
+    font-size: $font-size-blockquote;
+    line-height: 1.8;
+
+    small{
+        color: $default-color;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+    }
+
+    &.blockquote-primary{
+        border-color: $primary-color;
+        color: $primary-color;
+
+        small{
+            color: $primary-color;
+        }
+    }
+
+    &.blockquote-danger{
+        border-color: $danger-color;
+        color: $danger-color;
+
+        small{
+            color: $danger-color;
+        }
+    }
+
+    &.blockquote-white{
+        border-color: $opacity-8;
+        color: $white-color;
+
+        small{
+            color: $opacity-8;
+        }
+    }
+}
+
+// This file has been autogenerated by grunt task lessToSass. Any changes will be overwritten.
+.progress-container{
+    position: relative;
+
+    & + .progress-container,
+    & ~ .progress-container{
+        margin-top: $margin-base-vertical;
+    }
+    .progress-badge{
+        color: $default-color;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+
+    }
+
+    .progress {
+        height: 1px;
+        border-radius: 0;
+        box-shadow: none;
+        background: $opacity-gray-8;
+        margin-top: 14px;
+
+        .progress-bar {
+            box-shadow: none;
+            background-color: $default-color;
+        }
+
+        .progress-value{
+            position: absolute;
+            top: 2px;
+            right: 0;
+            color: $default-color;
+            font-size: $font-size-small;
+        }
+    }
+
+    &.progress-neutral{
+        .progress{
+            background: rgba(255, 255, 255, .3);
+        }
+
+        .progress-bar{
+            background: $white-bg;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $white-color;
+        }
+    }
+
+    &.progress-primary{
+        .progress{
+            background: $primary-color-opacity;
+        }
+
+        .progress-bar{
+            background: $brand-primary;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $brand-primary;
+        }
+    }
+
+    &.progress-info{
+        .progress{
+            background: $info-color-opacity;
+        }
+
+        .progress-bar{
+            background: $brand-info;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $brand-info;
+        }
+    }
+
+    &.progress-success{
+        .progress{
+            background: $success-color-opacity;
+        }
+
+        .progress-bar{
+            background: $brand-success;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $brand-success;
+        }
+    }
+
+    &.progress-warning{
+        .progress{
+            background: $warning-color-opacity;
+        }
+
+        .progress-bar{
+            background: $brand-warning;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $brand-warning;
+        }
+    }
+
+    &.progress-danger{
+        .progress{
+            background: $danger-color-opacity;
+        }
+
+        .progress-bar{
+            background: $brand-danger;
+        }
+
+        .progress-value,
+        .progress-badge{
+            color: $brand-danger;
+        }
+    }
+}
+
+
+
+

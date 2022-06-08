@@ -9,6 +9,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
+  heading = 'Register'
   submitted = false
   myForm: FormGroup;
   emailPattern = "[A-Za-z0-9._%+-]{1,}@[a-zA-Z-_.]{1,}[.]{1}[a-zA-Z]{2,}";

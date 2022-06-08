@@ -1,14 +1,16 @@
+<div class="page-header-image" style="background-image:url(assets/img/login.jpg)"></div>
+
+<app-header [heading]="heading"></app-header>
 <div class="container" style="height: 500px">
 
     <h1 style="text-align:center">Task</h1>
-
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
 
         <div class="form-group">
 
             <label for="taskname">Task Name</label><br>
 
-            <input type="text" formControlName="taskname" name="taskname" placeholder="Your name"  class="form-control">
+            <input type="text" formControlName="taskname" name="taskname" placeholder="Your name" class="form-control">
 
         </div>
 
@@ -18,7 +20,7 @@
 
             <label for="date">Task Date</label><br>
 
-            <input type="date" formControlName="date" name="date" placeholder="Your email" class = "form-control">
+            <input type="date" formControlName="date" name="date" placeholder="Your email" class="form-control">
 
         </div>
 
@@ -27,5 +29,17 @@
         <button class="btn btn-primary" type="submit">Submit</button>
 
     </form>
+
+    <h4 style="color:white;text-align:center" (click)="openCompleted()">Show Completed</h4>
+
+    <app-completed *ngIf="showCompleted == true" (completedPage)="newEmittedData($event)"></app-completed>
+
+    <h4 style="color:white" *ngIf="selectedTask == true">Selected task</h4>
+    <div *ngIf="selectedTask == true" (click)="close(data)" class="div1">
+        <ng-container *ngFor="let data of selectedTaskList">
+            <p>{{data.task}}</p>
+            <p>{{data.date}}</p>
+        </ng-container>
+    </div>
 
 </div>
