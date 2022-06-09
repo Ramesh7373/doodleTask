@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { SharedModuleModule } from 'src/app/common/shared-module/shared-module.module';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,

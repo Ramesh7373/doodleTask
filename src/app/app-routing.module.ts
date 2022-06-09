@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CalculatorComponent } from 'src/app/calculator/calculator.component';
 import { CompletedComponent } from 'src/app/task-component/completed/completed.component';
 import { RegisterComponent } from '../app/register/register.component';
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'completed',
     component: CompletedComponent
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent
   }
 ];
 
