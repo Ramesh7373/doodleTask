@@ -2,8 +2,9 @@
 
 <div *ngIf="showForm == true" style="color: white;
 /* margin: 17px 0 0 10px; */
-margin-left: 10px;
-font-size: 27px;" (click)="showForm = false">Back</div>
+margin-left: 8%;
+font-size: 27px;
+color:black" (click)="showForm = false">Back</div>
 
 <div class="card" *ngFor="let data of users | paginate: { itemsPerPage: itemsPerPage, currentPage: page ,
     totalItems : totalLength }, let i = index">
@@ -23,9 +24,9 @@ font-size: 27px;" (click)="showForm = false">Back</div>
 
 </div>
 
-<div class="row mb-5" style="float: right" >
+<!-- <div class="row mb-5" style="float: right" >
     <pagination-controls (pageChange)="page = $event" nextLabel="" previousLabel=""></pagination-controls>
-  </div>
+  </div> -->
 
 <div style="text-align:center" *ngIf="showForm == false">
     <button class="button" (click)="showForm = true;createUserForm();
