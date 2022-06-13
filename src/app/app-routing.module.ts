@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'calculator',
     component: CalculatorComponent
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
   }
 ];
 

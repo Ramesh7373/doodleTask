@@ -55,4 +55,8 @@ export class TaskComponentComponent implements OnInit {
     
   }
 
+  moveToUsers(){
+    this.router.navigate(['/users'])
+  }
+
 }

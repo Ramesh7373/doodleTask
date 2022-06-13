@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { SharedModuleModule } from 'src/app/common/shared-module/shared-module.module';
 import { CalculatorComponent } from './calculator/calculator.component';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SharedModuleModule
+    SharedModuleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

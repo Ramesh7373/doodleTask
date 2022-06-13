@@ -1,0 +1,78 @@
+<!-- <div class="page-header-image" style="background-image:url(assets/img/login.jpg)"></div> -->
+
+<div *ngIf="showForm == true" style="color: white;
+/* margin: 17px 0 0 10px; */
+margin-left: 10px;
+font-size: 27px;" (click)="showForm = false">Back</div>
+
+<div class="card" *ngFor="let data of users | paginate: { itemsPerPage: itemsPerPage, currentPage: page ,
+    totalItems : totalLength }, let i = index">
+    <ng-container *ngIf="showForm == false">
+        <img src="assets/img/User_fill_1.svg" alt="Avatar" style="width:100%">
+        <div class="container">
+            Name: {{data.tourist_name}}
+
+            <span><img (click)="editUser(data)" style="float:right;background: none !important"
+                    src="assets/img/edit-pen.svg" alt=""></span>
+            <br>
+            Email: {{data.tourist_email}} <span><img (click)="deleteUser(data)"
+                    style="float:right;background: none !important" src="assets/img/deleteBlack.png" alt=""></span><br>
+            Loc: {{data.tourist_location}} <br>
+        </div>
+    </ng-container>
+
+</div>
+
+<div class="row mb-5" style="float: right" >
+    <pagination-controls (pageChange)="page = $event" nextLabel="" previousLabel=""></pagination-controls>
+  </div>
+
+<div style="text-align:center" *ngIf="showForm == false">
+    <button class="button" (click)="showForm = true;createUserForm();
+    heading = 'Create User'">
+        Create User
+    </button>
+</div>
+
+
+<div class="container" style="height: 500px" *ngIf="showForm == true">
+    <h1 style="text-align:center">{{heading}}</h1>
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm,heading)">
+
+        <div class="form-group">
+
+            <label for="taskname">User Name</label><br>
+
+            <input type="text" formControlName="tourist_name" name="taskname" placeholder="Your name"
+                class="form-control">
+
+        </div>
+
+        <pre></pre>
+
+        <div class="form-group">
+
+            <label for="date">User Email</label><br>
+
+            <input type="text" formControlName="tourist_email" name="date" placeholder="Your email"
+                class="form-control">
+
+        </div>
+
+        <pre></pre>
+
+        <div class="form-group">
+
+            <label for="date">User Location</label><br>
+
+            <input type="text" formControlName="tourist_location" name="date" placeholder="Your Loc"
+                class="form-control">
+
+        </div>
+
+        <button style="margin-top:10px" class="btn btn-primary" type="submit">{{heading == 'Update User' ? 'Update' :
+            'Create'}}</button>
+
+    </form>
+</div>
