@@ -5,10 +5,11 @@ import { TaskComponentRoutingModule } from './task-component-routing.module';
 import { TaskComponentComponent } from './task-component.component';
 import { SharedModuleModule } from 'src/app/common/shared-module/shared-module.module';
 import { CompletedComponent } from './completed/completed.component';
+import { SelectedTaskComponent } from './selected-task/selected-task.component';
 
 
 @NgModule({
-  declarations: [TaskComponentComponent, CompletedComponent],
+  declarations: [TaskComponentComponent, CompletedComponent, SelectedTaskComponent],
   imports: [
     CommonModule,
     TaskComponentRoutingModule,

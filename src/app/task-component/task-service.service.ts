@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable ,Subject} from 'rxjs';
 
 
 
@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskServiceService {
+
+  SharingData = new Subject(); 
 
   tasks = [{
     id: 1,

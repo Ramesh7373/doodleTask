@@ -33,14 +33,16 @@
 
     <h4 style="color:white;text-align:center" (click)="openCompleted()">Show Completed</h4>
 
-    <app-completed *ngIf="showCompleted == true" (completedPage)="newEmittedData($event)"></app-completed>
+    <app-completed *ngIf="showCompleted == true" (completedPage)="newEmittedData($event)" [heading]="childHeader"></app-completed>
 
-    <h4 style="color:white" *ngIf="selectedTask == true">Selected task</h4>
+    <app-selected-task></app-selected-task>
+
+    <!-- <h4 style="color:white" *ngIf="selectedTask == true">Selected task</h4>
     <div *ngIf="selectedTask == true" (click)="close(data)" class="div1">
         <ng-container *ngFor="let data of selectedTaskList">
             <p>{{data.task}}</p>
             <p>{{data.date}}</p>
         </ng-container>
-    </div>
+    </div> -->
 
 </div>

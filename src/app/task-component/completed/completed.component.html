@@ -2,8 +2,8 @@
 
 <app-header  [heading]="heading"></app-header> -->
 
-
-<div (click)="close(data)" class="div1" *ngFor="let data of tasks">
+<div style="color:white;text-align:center;font-size: 20px;">{{heading}}</div>
+<div (click)="close(data)" [ngStyle]="{'background' : this.color}" class="div1" *ngFor="let data of tasks">
         <p>{{data.task}}</p>
         <p>{{data.date}}</p>
 </div>

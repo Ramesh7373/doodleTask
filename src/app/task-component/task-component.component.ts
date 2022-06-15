@@ -16,6 +16,7 @@ export class TaskComponentComponent implements OnInit {
   selectedTaskList = []
   myForm: FormGroup;
   emailPattern = "[A-Za-z0-9._%+-]{1,}@[a-zA-Z-_.]{1,}[.]{1}[a-zA-Z]{2,}";
+  childHeader : any = 'List of Tasks'
 
   constructor(private formBuilder: FormBuilder, 
     private taskServiceService : TaskServiceService,private router: Router) { }
@@ -44,6 +45,7 @@ export class TaskComponentComponent implements OnInit {
     console.log(e);
     if(e){
       this.selectedTaskList.push(e)
+      this.taskServiceService.SharingData.next(this.selectedTaskList)
       this.showCompleted = false
       this.selectedTask = true
     }
